@@ -7,49 +7,46 @@ li = os.listdir('./data/')
 #print(li)
 
 for l in li:
-    file = glob.glob('./data/' +l+ '/xy/*.xy')
+    li2 = os.listdir('./data/' +l)
+    #print(li2)
 
-    os.makedirs('./data/' +l+ '/xy2', exist_ok=True)
+    for l2 in li2:
 
-    for m in file:
-        # ファイルを読み込む
-        f = open(m, 'r')
+        file = glob.glob('./data/' +l+ '/' +l2+ '/xy/*.xy')
+        os.makedirs('./data/' +l+ '/' +l2+ '/xy3', exist_ok=True)
 
-        # 区切り文字を指定してリスト化
-        lst = f.read().split('\n') # 改行コードでリスト化
+        for m in file:
+            # ファイルを読み込む
+            f = open(m, 'r')
 
-        data = []
-        ind = []
-        count = 0
-        for i in lst:
-            ls = i.split(',')
-            #print(ls)
-            if ls[0] == "":
-                #print('null')
-                pass
-            else:
-                if count == 0:
-                    col = ls
+            # 区切り文字を指定してリスト化
+            lst = f.read().split('\n') # 改行コードでリスト化
+
+            data = []
+            ind = []
+            for i in lst:
+                ls = i.split(',')
+                #print(ls)
+                if ls[0] == "":
+                    #print('null')
+                    pass
                 else:
                     data.append(ls[1:])
                     ind.append(ls[0])
-            count += 1
 
-        col.remove('frm')
-        # DataFrame化
-        df = pd.DataFrame(data, columns=col, index=ind)
+            #col.remove('frm')
+            # DataFrame化
+            df = pd.DataFrame(data, index=ind)
+            print(df)
 
-        # 保存 # ファイル名を決めるために色々条件分岐使ってます
-        name = m[-8:-2]
-        if 's' in name:
-            if name.find('.') - name.find('_') != 3:
-                name = name[1:]
+            # 保存 # ファイル名を決めるために色々条件分岐使ってます
+            name = m[-5:-2]
+            if '_' in name:
+                name = '0' + m[-4:-2]
             else:
                 pass
-        else:
-            name = 's' + name
-        #print(name)
+            #print(name)
 
-        df.to_csv('./data/' +l+ '/xy2/' +name+ 'csv')
+            df.to_csv('./data/' +l+ '/' +l2+ '/xy3/' +name+ 'csv')
 
-        f.close()
+            f.close()
