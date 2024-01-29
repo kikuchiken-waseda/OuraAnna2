@@ -68,7 +68,7 @@
 |発話者|LSTM-Raw|LSTM-Normalize|BLSTM-Raw|BLSTM-Normalize|
 |---|---|---|---|---|
 |M1|<img src='./results/LSTM/01/400_raw.gif' width='200'>|<img src='./results/LSTM/01/400_norm.gif' width='200'>|<img src='./results/BLSTM/01/400_raw.gif' width='200'>|<img src='./results/BLSTM/01/400_norm.gif' width='200'>|
-|M2|<img src='./results/LSTM/25/400_raw.gif' width='200'>|<img src='./results/LSTM/25/400_norm.gif' width='200'>|<img src='./results/BLSTM/25/400_raw.gif' width='200'>|<img src='./results/BLSTM/25/
+|M2|<img src='./results/LSTM/25/400_raw.gif' width='200'>|<img src='./results/LSTM/25/400_norm.gif' width='200'>|<img src='./results/BLSTM/25/400_raw.gif' width='200'>|<img src='./results/BLSTM/25/400_norm.gif' width='200'>|
 |F1|<img src='./results/LSTM/08/400_raw.gif' width='200'>|<img src='./results/LSTM/08/400_norm.gif' width='200'>|<img src='./results/BLSTM/08/400_raw.gif' width='200'>|<img src='./results/BLSTM/08/400_norm.gif' width='200'>|
 |F2|<img src='./results/LSTM/31/400_raw.gif' width='200'>|<img src='./results/LSTM/31/400_norm.gif' width='200'>|<img src='./results/BLSTM/31/400_raw.gif' width='200'>|<img src='./results/BLSTM/31/400_norm.gif' width='200'>|
 
