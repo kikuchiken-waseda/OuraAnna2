@@ -1,7 +1,6 @@
 # Results
 
 This page summarises the results in the research presentation of INTERSPEECH 2024 _"Preprocessing for acoustic-to-articulatory inversion using real-time MRI movies of Japanese speech (Anna Oura, Waseda university)"_ .
-<br>This slide contains results based on data that is not publicly available. Therefore, this page will be closed after the conclusion of INTERSPEECH 2024.
 
 If you have any questions or comments, please fill in [this form](https://forms.gle/rteWb6LYDDrQ5uAV7).
 
